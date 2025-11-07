@@ -1,0 +1,20 @@
+@charset "UTF-8";
+
+* {margin: 0; padding: 0;}
+li {list-style: none;}
+a {color: #333; text-decoration: none;}
+
+.wrap {width: 990px; border: 1px solid #000; margin: 0 auto;}
+.header {width: 785px; height: 93px; border: 1px solid #000; margin: 0 auto;}
+.header .logo {width: 160px; height: 65px; background: lime; float:left ;}
+.header .login_box {width: 300px; height: 45px; border: 1px solid #000; float: right;}
+.header .gnb {width: 785px; height: 28px; background: #444; float: left;}
+
+.visual {width: 990px; height: 392px; background: lavender; margin-top: 9px;}
+
+
+.section {width: 785px; height: 230px; border: 1px solid #000; margin: 32px auto 55px auto;}
+
+
+.footer {width: 990px; height: 90px; background: #3e3e3e;}
+
