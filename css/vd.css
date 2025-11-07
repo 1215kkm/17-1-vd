@@ -1,0 +1,25 @@
+@charset "UTF-8";
+ 
+* {margin: 0; padding: 0;}
+li {list-style: none;}
+a {color: #333; text-decoration: none;}
+
+.wrap {width: 990px; height: 906px; margin: 0 auto;}
+
+.header {width: 785px; height: 93px; margin: 0 auto 9px auto;}
+.header h1 {width: 160px; height: 65px; float: left; }
+.header .login_box {height: 45px; float: right; }
+.header .login_box li {height: 45px; float: left; font-size: 12px;}
+.header .login_box li a {padding: 0 10px; display: block; height: 45px; line-height: 45px; }
+
+.header .gnb {width: 785px; height: 28px; float: left; text-align: center; font-size: 0; background: #333;}
+.header .gnb li {display: inline-block; font-size: 13px; height: 28px;}
+/* .header .gnb li.first {margin-left: 230px;} */
+.header .gnb li a {padding: 0 25px; display: block; height: 28px; line-height: 28px; color: #fff;;}
+
+
+.visual {width: 990px; height: 392px; background: lightblue;}
+
+.section {width: 785px; height: 228px; border: 1px solid #000; margin: 32px auto 55px auto;}
+
+.footer {width: 990px; height: 96px; background: #3e3e3e;}
