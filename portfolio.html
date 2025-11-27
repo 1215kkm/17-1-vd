@@ -3,131 +3,351 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UIUX Designer Portfolio</title>
+    <title>Creative UIUX Designer Portfolio</title>
     <link rel="stylesheet" href="css/portfolio.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- Custom Cursor -->
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <!-- Progress Bar -->
+    <div class="progress-bar"></div>
+
     <div class="wrap">
         <!-- Header -->
         <header class="header">
             <div class="header-inner">
                 <h1 class="logo">
-                    <a href="#">Portfolio</a>
+                    <a href="#">Port<span>folio</span></a>
                 </h1>
                 <button class="menu-toggle" aria-label="메뉴 열기">
-                    <span></span>
                     <span></span>
                     <span></span>
                 </button>
                 <nav class="gnb">
                     <ul>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#projects">Projects</a></li>
-                        <li><a href="#skills">Skills</a></li>
-                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="#home" data-text="Home">Home</a></li>
+                        <li><a href="#about" data-text="About">About</a></li>
+                        <li><a href="#works" data-text="Works">Works</a></li>
+                        <li><a href="#skills" data-text="Skills">Skills</a></li>
+                        <li><a href="#contact" data-text="Contact">Contact</a></li>
                     </ul>
                 </nav>
+                <div class="header-cta">
+                    <a href="#contact" class="btn btn-outline">Let's Talk</a>
+                </div>
             </div>
         </header>
 
         <!-- Hero Section -->
-        <section class="hero">
+        <section id="home" class="hero">
+            <div class="hero-bg">
+                <div class="gradient-sphere sphere-1"></div>
+                <div class="gradient-sphere sphere-2"></div>
+                <div class="gradient-sphere sphere-3"></div>
+            </div>
             <div class="hero-content">
-                <p class="hero-subtitle">UIUX Designer</p>
-                <h2 class="hero-title">안녕하세요,<br>디자이너 <span class="highlight">홍길동</span>입니다</h2>
-                <p class="hero-desc">사용자 중심의 직관적인 디자인을 통해<br>더 나은 디지털 경험을 만들어갑니다.</p>
+                <div class="hero-tag">
+                    <span class="tag-dot"></span>
+                    <span>Available for Freelance</span>
+                </div>
+                <h2 class="hero-title">
+                    <div class="title-line"><span>Creative</span></div>
+                    <div class="title-line"><span>UIUX Designer</span></div>
+                    <div class="title-line accent"><span>& Developer</span></div>
+                </h2>
+                <p class="hero-desc">사용자 중심의 직관적인 디자인과 인터랙티브한 경험을 만들어갑니다.<br>디지털 제품의 가치를 높이는 크리에이티브 파트너입니다.</p>
                 <div class="hero-buttons">
-                    <a href="#projects" class="btn btn-primary">프로젝트 보기</a>
-                    <a href="#contact" class="btn btn-secondary">연락하기</a>
+                    <a href="#works" class="btn btn-primary">
+                        <span>View Projects</span>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M5 12h14M12 5l7 7-7 7"/>
+                        </svg>
+                    </a>
+                    <a href="#contact" class="btn btn-glass">
+                        <span>Contact Me</span>
+                    </a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number" data-count="50">0</span>
+                        <span class="stat-label">Projects Done</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-count="5">0</span>
+                        <span class="stat-label">Years Experience</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-count="30">0</span>
+                        <span class="stat-label">Happy Clients</span>
+                    </div>
                 </div>
             </div>
-            <div class="hero-visual">
-                <div class="hero-shape"></div>
+            <div class="hero-image">
+                <div class="image-wrapper">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&h=750&fit=crop&crop=face" alt="Profile">
+                    <div class="image-overlay"></div>
+                </div>
+                <div class="floating-card card-1">
+                    <div class="card-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                        </svg>
+                    </div>
+                    <span>UI/UX Design</span>
+                </div>
+                <div class="floating-card card-2">
+                    <div class="card-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="16 18 22 12 16 6"></polyline>
+                            <polyline points="8 6 2 12 8 18"></polyline>
+                        </svg>
+                    </div>
+                    <span>Development</span>
+                </div>
+            </div>
+            <div class="scroll-indicator">
+                <div class="mouse">
+                    <div class="wheel"></div>
+                </div>
+                <span>Scroll Down</span>
+            </div>
+        </section>
+
+        <!-- Marquee Section -->
+        <section class="marquee-section">
+            <div class="marquee">
+                <div class="marquee-content">
+                    <span>UI DESIGN</span>
+                    <span class="dot">●</span>
+                    <span>UX RESEARCH</span>
+                    <span class="dot">●</span>
+                    <span>PROTOTYPING</span>
+                    <span class="dot">●</span>
+                    <span>BRANDING</span>
+                    <span class="dot">●</span>
+                    <span>WEB DEVELOPMENT</span>
+                    <span class="dot">●</span>
+                    <span>MOTION DESIGN</span>
+                    <span class="dot">●</span>
+                    <span>UI DESIGN</span>
+                    <span class="dot">●</span>
+                    <span>UX RESEARCH</span>
+                    <span class="dot">●</span>
+                    <span>PROTOTYPING</span>
+                    <span class="dot">●</span>
+                    <span>BRANDING</span>
+                    <span class="dot">●</span>
+                </div>
             </div>
         </section>
 
         <!-- About Section -->
         <section id="about" class="about">
             <div class="section-inner">
-                <h3 class="section-title">About Me</h3>
-                <div class="about-content">
-                    <div class="about-image">
-                        <div class="image-placeholder"></div>
+                <div class="about-grid">
+                    <div class="about-images">
+                        <div class="about-img main-img">
+                            <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=600&h=800&fit=crop" alt="Working">
+                        </div>
+                        <div class="about-img secondary-img">
+                            <img src="https://images.unsplash.com/photo-1561070791-2526d30994b5?w=400&h=500&fit=crop" alt="Design Process">
+                        </div>
+                        <div class="experience-badge">
+                            <span class="exp-number">5+</span>
+                            <span class="exp-text">Years<br>Experience</span>
+                        </div>
                     </div>
-                    <div class="about-text">
-                        <h4>사용자를 이해하는 디자이너</h4>
-                        <p>5년간의 UIUX 디자인 경험을 바탕으로 사용자 리서치부터 프로토타이핑, 최종 디자인까지 전 과정을 담당해왔습니다.</p>
-                        <p>데이터 기반의 의사결정과 사용자 피드백을 중시하며, 개발팀과의 원활한 협업을 통해 실현 가능한 디자인을 추구합니다.</p>
-                        <ul class="about-info">
-                            <li><strong>이름</strong>홍길동</li>
-                            <li><strong>이메일</strong>hello@portfolio.com</li>
-                            <li><strong>경력</strong>5년</li>
-                            <li><strong>위치</strong>서울, 대한민국</li>
-                        </ul>
+                    <div class="about-content">
+                        <div class="section-tag">
+                            <span class="tag-line"></span>
+                            <span>About Me</span>
+                        </div>
+                        <h3 class="section-title">
+                            Crafting Digital<br>
+                            <span class="gradient-text">Experiences</span> That Matter
+                        </h3>
+                        <p class="about-text">안녕하세요, 5년차 UIUX 디자이너입니다. 사용자 리서치부터 프로토타이핑, 최종 디자인까지 전 과정을 담당하며, 데이터 기반의 의사결정과 사용자 피드백을 중시합니다.</p>
+                        <p class="about-text">개발팀과의 원활한 협업을 통해 실현 가능한 디자인을 추구하며, 항상 새로운 트렌드와 기술을 학습하고 적용하는 것을 즐깁니다.</p>
+                        <div class="about-info-grid">
+                            <div class="info-item">
+                                <span class="info-label">Name</span>
+                                <span class="info-value">홍길동</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">Email</span>
+                                <span class="info-value">hello@portfolio.com</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">Location</span>
+                                <span class="info-value">Seoul, Korea</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">Availability</span>
+                                <span class="info-value available">Open to Work</span>
+                            </div>
+                        </div>
+                        <a href="#" class="btn btn-dark">
+                            <span>Download CV</span>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                                <polyline points="7 10 12 15 17 10"/>
+                                <line x1="12" y1="15" x2="12" y2="3"/>
+                            </svg>
+                        </a>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Projects Section -->
-        <section id="projects" class="projects">
+        <!-- Works Section -->
+        <section id="works" class="works">
             <div class="section-inner">
-                <h3 class="section-title">Projects</h3>
-                <p class="section-desc">다양한 프로젝트를 통해 쌓아온 경험들입니다.</p>
-                <div class="project-grid">
-                    <article class="project-card">
-                        <div class="project-image">
-                            <div class="image-placeholder"></div>
-                            <div class="project-overlay">
-                                <a href="#" class="btn btn-small">자세히 보기</a>
+                <div class="section-header">
+                    <div class="section-tag">
+                        <span class="tag-line"></span>
+                        <span>My Works</span>
+                    </div>
+                    <h3 class="section-title">
+                        Selected <span class="gradient-text">Projects</span>
+                    </h3>
+                    <p class="section-desc">다양한 프로젝트를 통해 쌓아온 경험과 결과물입니다.</p>
+                </div>
+
+                <div class="works-filter">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="app">Mobile App</button>
+                    <button class="filter-btn" data-filter="web">Web Design</button>
+                    <button class="filter-btn" data-filter="brand">Branding</button>
+                </div>
+
+                <div class="works-grid">
+                    <article class="work-card" data-category="app">
+                        <div class="work-image">
+                            <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=800&h=600&fit=crop" alt="Mobile App Project">
+                            <div class="work-overlay">
+                                <a href="#" class="work-link">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                                        <polyline points="15 3 21 3 21 9"/>
+                                        <line x1="10" y1="14" x2="21" y2="3"/>
+                                    </svg>
+                                </a>
                             </div>
                         </div>
-                        <div class="project-info">
-                            <span class="project-category">Mobile App</span>
-                            <h4 class="project-title">쇼핑몰 앱 리디자인</h4>
-                            <p class="project-desc">사용자 경험 개선을 위한 이커머스 앱 전면 리디자인</p>
+                        <div class="work-info">
+                            <span class="work-category">Mobile App</span>
+                            <h4 class="work-title">E-Commerce App Redesign</h4>
+                            <p class="work-desc">사용자 경험 개선을 위한 이커머스 앱 전면 리디자인</p>
+                            <div class="work-tags">
+                                <span>Figma</span>
+                                <span>Prototyping</span>
+                                <span>User Research</span>
+                            </div>
                         </div>
                     </article>
-                    <article class="project-card">
-                        <div class="project-image">
-                            <div class="image-placeholder"></div>
-                            <div class="project-overlay">
-                                <a href="#" class="btn btn-small">자세히 보기</a>
+
+                    <article class="work-card" data-category="web">
+                        <div class="work-image">
+                            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop" alt="Dashboard Project">
+                            <div class="work-overlay">
+                                <a href="#" class="work-link">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                                        <polyline points="15 3 21 3 21 9"/>
+                                        <line x1="10" y1="14" x2="21" y2="3"/>
+                                    </svg>
+                                </a>
                             </div>
                         </div>
-                        <div class="project-info">
-                            <span class="project-category">Web Design</span>
-                            <h4 class="project-title">기업 웹사이트</h4>
-                            <p class="project-desc">브랜드 아이덴티티를 반영한 반응형 웹사이트 디자인</p>
+                        <div class="work-info">
+                            <span class="work-category">Web Design</span>
+                            <h4 class="work-title">Analytics Dashboard</h4>
+                            <p class="work-desc">데이터 시각화 중심의 어드민 대시보드 UI 설계</p>
+                            <div class="work-tags">
+                                <span>Dashboard</span>
+                                <span>Data Viz</span>
+                                <span>React</span>
+                            </div>
                         </div>
                     </article>
-                    <article class="project-card">
-                        <div class="project-image">
-                            <div class="image-placeholder"></div>
-                            <div class="project-overlay">
-                                <a href="#" class="btn btn-small">자세히 보기</a>
+
+                    <article class="work-card large" data-category="brand">
+                        <div class="work-image">
+                            <img src="https://images.unsplash.com/photo-1634942537034-2531766767d1?w=1200&h=800&fit=crop" alt="Branding Project">
+                            <div class="work-overlay">
+                                <a href="#" class="work-link">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                                        <polyline points="15 3 21 3 21 9"/>
+                                        <line x1="10" y1="14" x2="21" y2="3"/>
+                                    </svg>
+                                </a>
                             </div>
                         </div>
-                        <div class="project-info">
-                            <span class="project-category">Dashboard</span>
-                            <h4 class="project-title">관리자 대시보드</h4>
-                            <p class="project-desc">데이터 시각화 중심의 어드민 대시보드 UI 설계</p>
+                        <div class="work-info">
+                            <span class="work-category">Branding</span>
+                            <h4 class="work-title">Brand Identity Design</h4>
+                            <p class="work-desc">스타트업 브랜드 아이덴티티 전략 및 디자인 시스템 구축</p>
+                            <div class="work-tags">
+                                <span>Branding</span>
+                                <span>Logo Design</span>
+                                <span>Guidelines</span>
+                            </div>
                         </div>
                     </article>
-                    <article class="project-card">
-                        <div class="project-image">
-                            <div class="image-placeholder"></div>
-                            <div class="project-overlay">
-                                <a href="#" class="btn btn-small">자세히 보기</a>
+
+                    <article class="work-card" data-category="app">
+                        <div class="work-image">
+                            <img src="https://images.unsplash.com/photo-1576153192396-180ecef2a715?w=800&h=600&fit=crop" alt="Healthcare App">
+                            <div class="work-overlay">
+                                <a href="#" class="work-link">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                                        <polyline points="15 3 21 3 21 9"/>
+                                        <line x1="10" y1="14" x2="21" y2="3"/>
+                                    </svg>
+                                </a>
                             </div>
                         </div>
-                        <div class="project-info">
-                            <span class="project-category">Mobile App</span>
-                            <h4 class="project-title">헬스케어 앱</h4>
-                            <p class="project-desc">건강 관리를 위한 직관적인 모바일 앱 디자인</p>
+                        <div class="work-info">
+                            <span class="work-category">Mobile App</span>
+                            <h4 class="work-title">Healthcare App</h4>
+                            <p class="work-desc">건강 관리를 위한 직관적인 모바일 앱 디자인</p>
+                            <div class="work-tags">
+                                <span>Healthcare</span>
+                                <span>iOS</span>
+                                <span>Android</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="work-card" data-category="web">
+                        <div class="work-image">
+                            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop" alt="Web Platform">
+                            <div class="work-overlay">
+                                <a href="#" class="work-link">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                                        <polyline points="15 3 21 3 21 9"/>
+                                        <line x1="10" y1="14" x2="21" y2="3"/>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="work-info">
+                            <span class="work-category">Web Design</span>
+                            <h4 class="work-title">SaaS Platform</h4>
+                            <p class="work-desc">B2B SaaS 플랫폼 웹사이트 디자인 및 개발</p>
+                            <div class="work-tags">
+                                <span>SaaS</span>
+                                <span>Landing Page</span>
+                                <span>Webflow</span>
+                            </div>
                         </div>
                     </article>
                 </div>
@@ -137,50 +357,195 @@
         <!-- Skills Section -->
         <section id="skills" class="skills">
             <div class="section-inner">
-                <h3 class="section-title">Skills</h3>
-                <p class="section-desc">디자인 작업에 활용하는 도구와 기술입니다.</p>
-                <div class="skills-grid">
-                    <div class="skill-category">
-                        <h4>Design Tools</h4>
-                        <ul class="skill-list">
-                            <li>
-                                <span class="skill-name">Figma</span>
-                                <div class="skill-bar"><div class="skill-progress" style="width: 95%;"></div></div>
-                            </li>
-                            <li>
-                                <span class="skill-name">Adobe XD</span>
-                                <div class="skill-bar"><div class="skill-progress" style="width: 90%;"></div></div>
-                            </li>
-                            <li>
-                                <span class="skill-name">Sketch</span>
-                                <div class="skill-bar"><div class="skill-progress" style="width: 85%;"></div></div>
-                            </li>
-                            <li>
-                                <span class="skill-name">Photoshop</span>
-                                <div class="skill-bar"><div class="skill-progress" style="width: 88%;"></div></div>
-                            </li>
-                        </ul>
+                <div class="skills-header">
+                    <div class="section-tag">
+                        <span class="tag-line"></span>
+                        <span>My Skills</span>
                     </div>
-                    <div class="skill-category">
-                        <h4>Other Skills</h4>
-                        <ul class="skill-list">
-                            <li>
-                                <span class="skill-name">Prototyping</span>
-                                <div class="skill-bar"><div class="skill-progress" style="width: 92%;"></div></div>
-                            </li>
-                            <li>
-                                <span class="skill-name">User Research</span>
-                                <div class="skill-bar"><div class="skill-progress" style="width: 85%;"></div></div>
-                            </li>
-                            <li>
-                                <span class="skill-name">HTML/CSS</span>
-                                <div class="skill-bar"><div class="skill-progress" style="width: 80%;"></div></div>
-                            </li>
-                            <li>
-                                <span class="skill-name">Design System</span>
-                                <div class="skill-bar"><div class="skill-progress" style="width: 88%;"></div></div>
-                            </li>
-                        </ul>
+                    <h3 class="section-title">
+                        Tools & <span class="gradient-text">Technologies</span>
+                    </h3>
+                </div>
+
+                <div class="skills-container">
+                    <div class="skills-visual">
+                        <div class="skill-orbit">
+                            <div class="orbit-center">
+                                <span>SKILLS</span>
+                            </div>
+                            <div class="orbit-item" style="--i: 0;">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" alt="Figma">
+                            </div>
+                            <div class="orbit-item" style="--i: 1;">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sketch/sketch-original.svg" alt="Sketch">
+                            </div>
+                            <div class="orbit-item" style="--i: 2;">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/xd/xd-plain.svg" alt="Adobe XD">
+                            </div>
+                            <div class="orbit-item" style="--i: 3;">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/photoshop/photoshop-plain.svg" alt="Photoshop">
+                            </div>
+                            <div class="orbit-item" style="--i: 4;">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/illustrator/illustrator-plain.svg" alt="Illustrator">
+                            </div>
+                            <div class="orbit-item" style="--i: 5;">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5">
+                            </div>
+                            <div class="orbit-item" style="--i: 6;">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3">
+                            </div>
+                            <div class="orbit-item" style="--i: 7;">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="skills-list">
+                        <div class="skill-category">
+                            <h4>Design</h4>
+                            <div class="skill-items">
+                                <div class="skill-item">
+                                    <div class="skill-info">
+                                        <span class="skill-name">Figma</span>
+                                        <span class="skill-percent">95%</span>
+                                    </div>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" data-progress="95"></div>
+                                    </div>
+                                </div>
+                                <div class="skill-item">
+                                    <div class="skill-info">
+                                        <span class="skill-name">Adobe XD</span>
+                                        <span class="skill-percent">90%</span>
+                                    </div>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" data-progress="90"></div>
+                                    </div>
+                                </div>
+                                <div class="skill-item">
+                                    <div class="skill-info">
+                                        <span class="skill-name">Photoshop</span>
+                                        <span class="skill-percent">85%</span>
+                                    </div>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" data-progress="85"></div>
+                                    </div>
+                                </div>
+                                <div class="skill-item">
+                                    <div class="skill-info">
+                                        <span class="skill-name">Illustrator</span>
+                                        <span class="skill-percent">80%</span>
+                                    </div>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" data-progress="80"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="skill-category">
+                            <h4>Development</h4>
+                            <div class="skill-items">
+                                <div class="skill-item">
+                                    <div class="skill-info">
+                                        <span class="skill-name">HTML/CSS</span>
+                                        <span class="skill-percent">90%</span>
+                                    </div>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" data-progress="90"></div>
+                                    </div>
+                                </div>
+                                <div class="skill-item">
+                                    <div class="skill-info">
+                                        <span class="skill-name">JavaScript</span>
+                                        <span class="skill-percent">75%</span>
+                                    </div>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" data-progress="75"></div>
+                                    </div>
+                                </div>
+                                <div class="skill-item">
+                                    <div class="skill-info">
+                                        <span class="skill-name">React</span>
+                                        <span class="skill-percent">70%</span>
+                                    </div>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" data-progress="70"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section class="testimonials">
+            <div class="section-inner">
+                <div class="section-header center">
+                    <div class="section-tag">
+                        <span class="tag-line"></span>
+                        <span>Testimonials</span>
+                    </div>
+                    <h3 class="section-title">
+                        What Clients <span class="gradient-text">Say</span>
+                    </h3>
+                </div>
+
+                <div class="testimonials-slider">
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <div class="quote-icon">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M11.192 15.757c0-.88-.23-1.618-.69-2.217-.326-.412-.768-.683-1.327-.812-.55-.128-1.07-.137-1.54-.028-.16-.95.1-1.956.76-3.022.66-1.065 1.515-1.867 2.558-2.403L9.373 5c-.8.396-1.56.898-2.26 1.505-.71.607-1.34 1.305-1.9 2.094s-.98 1.68-1.25 2.69-.346 2.04-.217 3.1c.168 1.4.62 2.52 1.356 3.35.735.84 1.652 1.26 2.748 1.26.965 0 1.766-.29 2.4-.878.628-.576.94-1.365.94-2.368l.002.004zm9.124 0c0-.88-.23-1.618-.69-2.217-.326-.42-.768-.695-1.327-.825-.55-.13-1.07-.14-1.54-.03-.16-.94.09-1.95.75-3.02.66-1.06 1.514-1.86 2.557-2.4L18.49 5c-.8.396-1.555.898-2.26 1.505-.708.607-1.34 1.305-1.894 2.094-.556.79-.97 1.68-1.24 2.69-.273 1-.345 2.04-.217 3.1.168 1.4.62 2.52 1.356 3.35.735.84 1.652 1.26 2.748 1.26.965 0 1.766-.29 2.4-.878.628-.576.94-1.365.94-2.368l-.007.004z"/>
+                                </svg>
+                            </div>
+                            <p>"뛰어난 디자인 감각과 사용자 중심의 사고방식으로 프로젝트를 성공적으로 이끌어주셨습니다. 커뮤니케이션도 원활하고 항상 기대 이상의 결과물을 만들어주십니다."</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop&crop=face" alt="Client">
+                            <div class="author-info">
+                                <h5>김철수</h5>
+                                <span>CEO, Tech Startup</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <div class="quote-icon">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M11.192 15.757c0-.88-.23-1.618-.69-2.217-.326-.412-.768-.683-1.327-.812-.55-.128-1.07-.137-1.54-.028-.16-.95.1-1.956.76-3.022.66-1.065 1.515-1.867 2.558-2.403L9.373 5c-.8.396-1.56.898-2.26 1.505-.71.607-1.34 1.305-1.9 2.094s-.98 1.68-1.25 2.69-.346 2.04-.217 3.1c.168 1.4.62 2.52 1.356 3.35.735.84 1.652 1.26 2.748 1.26.965 0 1.766-.29 2.4-.878.628-.576.94-1.365.94-2.368l.002.004zm9.124 0c0-.88-.23-1.618-.69-2.217-.326-.42-.768-.695-1.327-.825-.55-.13-1.07-.14-1.54-.03-.16-.94.09-1.95.75-3.02.66-1.06 1.514-1.86 2.557-2.4L18.49 5c-.8.396-1.555.898-2.26 1.505-.708.607-1.34 1.305-1.894 2.094-.556.79-.97 1.68-1.24 2.69-.273 1-.345 2.04-.217 3.1.168 1.4.62 2.52 1.356 3.35.735.84 1.652 1.26 2.748 1.26.965 0 1.766-.29 2.4-.878.628-.576.94-1.365.94-2.368l-.007.004z"/>
+                                </svg>
+                            </div>
+                            <p>"앱 리디자인 프로젝트에서 사용자 리서치부터 최종 디자인까지 완벽하게 진행해주셨습니다. 런칭 후 사용자 만족도가 크게 향상되었습니다."</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop&crop=face" alt="Client">
+                            <div class="author-info">
+                                <h5>이영희</h5>
+                                <span>Product Manager, E-commerce</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <div class="quote-icon">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M11.192 15.757c0-.88-.23-1.618-.69-2.217-.326-.412-.768-.683-1.327-.812-.55-.128-1.07-.137-1.54-.028-.16-.95.1-1.956.76-3.022.66-1.065 1.515-1.867 2.558-2.403L9.373 5c-.8.396-1.56.898-2.26 1.505-.71.607-1.34 1.305-1.9 2.094s-.98 1.68-1.25 2.69-.346 2.04-.217 3.1c.168 1.4.62 2.52 1.356 3.35.735.84 1.652 1.26 2.748 1.26.965 0 1.766-.29 2.4-.878.628-.576.94-1.365.94-2.368l.002.004zm9.124 0c0-.88-.23-1.618-.69-2.217-.326-.42-.768-.695-1.327-.825-.55-.13-1.07-.14-1.54-.03-.16-.94.09-1.95.75-3.02.66-1.06 1.514-1.86 2.557-2.4L18.49 5c-.8.396-1.555.898-2.26 1.505-.708.607-1.34 1.305-1.894 2.094-.556.79-.97 1.68-1.24 2.69-.273 1-.345 2.04-.217 3.1.168 1.4.62 2.52 1.356 3.35.735.84 1.652 1.26 2.748 1.26.965 0 1.766-.29 2.4-.878.628-.576.94-1.365.94-2.368l-.007.004z"/>
+                                </svg>
+                            </div>
+                            <p>"디자인 시스템 구축 프로젝트를 함께 진행했는데, 체계적인 접근 방식과 꼼꼼한 문서화가 인상적이었습니다. 팀 전체의 생산성이 크게 향상되었습니다."</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&h=100&fit=crop&crop=face" alt="Client">
+                            <div class="author-info">
+                                <h5>박지민</h5>
+                                <span>Design Lead, Agency</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -189,60 +554,117 @@
         <!-- Contact Section -->
         <section id="contact" class="contact">
             <div class="section-inner">
-                <h3 class="section-title">Contact</h3>
-                <p class="section-desc">프로젝트 문의나 협업 제안을 환영합니다.</p>
-                <div class="contact-content">
+                <div class="contact-wrapper">
                     <div class="contact-info">
-                        <div class="contact-item">
-                            <div class="contact-icon">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-                                    <polyline points="22,6 12,13 2,6"></polyline>
-                                </svg>
-                            </div>
-                            <div class="contact-text">
-                                <h5>Email</h5>
-                                <p>hello@portfolio.com</p>
+                        <div class="section-tag">
+                            <span class="tag-line"></span>
+                            <span>Get In Touch</span>
+                        </div>
+                        <h3 class="section-title">
+                            Let's Work<br>
+                            <span class="gradient-text">Together</span>
+                        </h3>
+                        <p class="contact-desc">새로운 프로젝트나 협업 기회에 대해 이야기 나눠보고 싶습니다. 언제든 연락주세요!</p>
+
+                        <div class="contact-details">
+                            <a href="mailto:hello@portfolio.com" class="contact-item">
+                                <div class="contact-icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                                        <polyline points="22,6 12,13 2,6"/>
+                                    </svg>
+                                </div>
+                                <div class="contact-text">
+                                    <span class="label">Email</span>
+                                    <span class="value">hello@portfolio.com</span>
+                                </div>
+                            </a>
+                            <a href="tel:+821012345678" class="contact-item">
+                                <div class="contact-icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                                    </svg>
+                                </div>
+                                <div class="contact-text">
+                                    <span class="label">Phone</span>
+                                    <span class="value">010-1234-5678</span>
+                                </div>
+                            </a>
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                                        <circle cx="12" cy="10" r="3"/>
+                                    </svg>
+                                </div>
+                                <div class="contact-text">
+                                    <span class="label">Location</span>
+                                    <span class="value">Seoul, South Korea</span>
+                                </div>
                             </div>
                         </div>
-                        <div class="contact-item">
-                            <div class="contact-icon">
+
+                        <div class="social-links">
+                            <a href="#" class="social-link" aria-label="Instagram">
                                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
                                 </svg>
-                            </div>
-                            <div class="contact-text">
-                                <h5>Phone</h5>
-                                <p>010-1234-5678</p>
-                            </div>
-                        </div>
-                        <div class="contact-item">
-                            <div class="contact-icon">
+                            </a>
+                            <a href="#" class="social-link" aria-label="LinkedIn">
                                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
-                                    <circle cx="12" cy="10" r="3"></circle>
+                                    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+                                    <rect x="2" y="9" width="4" height="12"/>
+                                    <circle cx="4" cy="4" r="2"/>
                                 </svg>
-                            </div>
-                            <div class="contact-text">
-                                <h5>Location</h5>
-                                <p>서울특별시 강남구</p>
-                            </div>
+                            </a>
+                            <a href="#" class="social-link" aria-label="Dribbble">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="12" cy="12" r="10"/>
+                                    <path d="M19.13 5.09C15.22 9.14 10 10.44 2.25 10.94"/>
+                                    <path d="M21.75 12.84c-6.62-1.41-12.14 1-16.38 6.32"/>
+                                    <path d="M8.56 2.75c4.37 6 6 9.42 8 17.72"/>
+                                </svg>
+                            </a>
+                            <a href="#" class="social-link" aria-label="Behance">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M1 9h7.5a2.5 2.5 0 0 1 0 5H1V9z"/>
+                                    <path d="M1 14h8a3 3 0 0 1 0 6H1v-6z"/>
+                                    <rect x="15" y="4" width="7" height="2"/>
+                                    <circle cx="18.5" cy="14" r="4"/>
+                                    <path d="M14.5 14h8"/>
+                                </svg>
+                            </a>
                         </div>
                     </div>
+
                     <form class="contact-form">
-                        <div class="form-group">
-                            <input type="text" placeholder="이름" required>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <input type="text" id="name" required>
+                                <label for="name">Your Name</label>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" id="email" required>
+                                <label for="email">Your Email</label>
+                            </div>
                         </div>
                         <div class="form-group">
-                            <input type="email" placeholder="이메일" required>
+                            <input type="text" id="subject" required>
+                            <label for="subject">Subject</label>
                         </div>
                         <div class="form-group">
-                            <input type="text" placeholder="제목">
+                            <textarea id="message" rows="5" required></textarea>
+                            <label for="message">Your Message</label>
                         </div>
-                        <div class="form-group">
-                            <textarea placeholder="메시지를 입력해주세요" rows="5" required></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary btn-full">메시지 보내기</button>
+                        <button type="submit" class="btn btn-primary btn-full">
+                            <span>Send Message</span>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <line x1="22" y1="2" x2="11" y2="13"/>
+                                <polygon points="22 2 15 22 11 13 2 9 22 2"/>
+                            </svg>
+                        </button>
                     </form>
                 </div>
             </div>
@@ -251,81 +673,382 @@
         <!-- Footer -->
         <footer class="footer">
             <div class="footer-inner">
-                <div class="footer-social">
-                    <a href="#" aria-label="Instagram">
+                <div class="footer-top">
+                    <div class="footer-brand">
+                        <h2 class="footer-logo">Port<span>folio</span></h2>
+                        <p>사용자 중심의 직관적인 디자인을 통해 더 나은 디지털 경험을 만들어갑니다.</p>
+                    </div>
+                    <div class="footer-links">
+                        <div class="footer-col">
+                            <h4>Navigation</h4>
+                            <ul>
+                                <li><a href="#home">Home</a></li>
+                                <li><a href="#about">About</a></li>
+                                <li><a href="#works">Works</a></li>
+                                <li><a href="#contact">Contact</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer-col">
+                            <h4>Social</h4>
+                            <ul>
+                                <li><a href="#">Instagram</a></li>
+                                <li><a href="#">LinkedIn</a></li>
+                                <li><a href="#">Dribbble</a></li>
+                                <li><a href="#">Behance</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2024 Portfolio. All rights reserved.</p>
+                    <a href="#home" class="back-to-top">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
-                        </svg>
-                    </a>
-                    <a href="#" aria-label="LinkedIn">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
-                            <rect x="2" y="9" width="4" height="12"></rect>
-                            <circle cx="4" cy="4" r="2"></circle>
-                        </svg>
-                    </a>
-                    <a href="#" aria-label="Behance">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M22 7h-7"></path>
-                            <path d="M22 12h-7"></path>
-                            <path d="M22 17h-7"></path>
-                            <path d="M2 7h7a2 2 0 0 1 2 2v0a2 2 0 0 1-2 2H2V7z"></path>
-                            <path d="M2 11h7a2 2 0 0 1 2 2v1a2 2 0 0 1-2 2H2v-5z"></path>
-                        </svg>
-                    </a>
-                    <a href="#" aria-label="GitHub">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                            <path d="M18 15l-6-6-6 6"/>
                         </svg>
                     </a>
                 </div>
-                <p class="footer-copyright">&copy; 2024 Portfolio. All rights reserved.</p>
             </div>
         </footer>
     </div>
 
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
     <script>
-        // Mobile Menu Toggle
+        // Lenis Smooth Scroll
+        const lenis = new Lenis({
+            duration: 1.2,
+            easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+            orientation: 'vertical',
+            gestureOrientation: 'vertical',
+            smoothWheel: true,
+            wheelMultiplier: 1,
+            touchMultiplier: 2,
+            infinite: false,
+        });
+
+        function raf(time) {
+            lenis.raf(time);
+            requestAnimationFrame(raf);
+        }
+        requestAnimationFrame(raf);
+
+        // GSAP ScrollTrigger
+        gsap.registerPlugin(ScrollTrigger);
+
+        // Update ScrollTrigger on Lenis scroll
+        lenis.on('scroll', ScrollTrigger.update);
+
+        gsap.ticker.add((time) => {
+            lenis.raf(time * 1000);
+        });
+
+        gsap.ticker.lagSmoothing(0);
+
+        // Custom Cursor
+        const cursor = document.querySelector('.cursor');
+        const cursorFollower = document.querySelector('.cursor-follower');
+
+        document.addEventListener('mousemove', (e) => {
+            gsap.to(cursor, { x: e.clientX, y: e.clientY, duration: 0.1 });
+            gsap.to(cursorFollower, { x: e.clientX, y: e.clientY, duration: 0.3 });
+        });
+
+        document.querySelectorAll('a, button').forEach(el => {
+            el.addEventListener('mouseenter', () => {
+                cursor.classList.add('hover');
+                cursorFollower.classList.add('hover');
+            });
+            el.addEventListener('mouseleave', () => {
+                cursor.classList.remove('hover');
+                cursorFollower.classList.remove('hover');
+            });
+        });
+
+        // Progress Bar
+        gsap.to('.progress-bar', {
+            scaleX: 1,
+            ease: 'none',
+            scrollTrigger: {
+                trigger: 'body',
+                start: 'top top',
+                end: 'bottom bottom',
+                scrub: 0.3
+            }
+        });
+
+        // Header Scroll Effect
+        const header = document.querySelector('.header');
+        ScrollTrigger.create({
+            start: 'top -80',
+            end: 99999,
+            toggleClass: { className: 'scrolled', targets: '.header' }
+        });
+
+        // Hero Animations
+        const heroTl = gsap.timeline({ defaults: { ease: 'power3.out' } });
+
+        heroTl.from('.hero-tag', { opacity: 0, y: 30, duration: 0.8 })
+            .from('.title-line span', {
+                y: 100,
+                opacity: 0,
+                duration: 1,
+                stagger: 0.2
+            }, '-=0.4')
+            .from('.hero-desc', { opacity: 0, y: 20, duration: 0.8 }, '-=0.5')
+            .from('.hero-buttons .btn', {
+                opacity: 0,
+                y: 20,
+                duration: 0.6,
+                stagger: 0.15
+            }, '-=0.4')
+            .from('.stat-item', {
+                opacity: 0,
+                y: 30,
+                duration: 0.6,
+                stagger: 0.1
+            }, '-=0.3')
+            .from('.hero-image', {
+                opacity: 0,
+                scale: 0.8,
+                duration: 1
+            }, '-=1')
+            .from('.floating-card', {
+                opacity: 0,
+                scale: 0,
+                duration: 0.6,
+                stagger: 0.2
+            }, '-=0.5')
+            .from('.scroll-indicator', { opacity: 0, y: -20, duration: 0.6 }, '-=0.3');
+
+        // Stats Counter Animation
+        const statNumbers = document.querySelectorAll('.stat-number');
+        statNumbers.forEach(stat => {
+            const target = parseInt(stat.dataset.count);
+            gsap.to(stat, {
+                innerHTML: target,
+                duration: 2,
+                snap: { innerHTML: 1 },
+                scrollTrigger: {
+                    trigger: stat,
+                    start: 'top 80%'
+                }
+            });
+        });
+
+        // Marquee Animation
+        gsap.to('.marquee-content', {
+            xPercent: -50,
+            repeat: -1,
+            duration: 20,
+            ease: 'linear'
+        });
+
+        // About Section Animation
+        gsap.from('.about-images', {
+            scrollTrigger: {
+                trigger: '.about',
+                start: 'top 60%'
+            },
+            x: -100,
+            opacity: 0,
+            duration: 1
+        });
+
+        gsap.from('.about-content', {
+            scrollTrigger: {
+                trigger: '.about',
+                start: 'top 60%'
+            },
+            x: 100,
+            opacity: 0,
+            duration: 1
+        });
+
+        // Works Section Animation
+        gsap.from('.work-card', {
+            scrollTrigger: {
+                trigger: '.works-grid',
+                start: 'top 70%'
+            },
+            y: 100,
+            opacity: 0,
+            duration: 0.8,
+            stagger: 0.15
+        });
+
+        // Works Filter
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const workCards = document.querySelectorAll('.work-card');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                filterBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+
+                const filter = btn.dataset.filter;
+
+                workCards.forEach(card => {
+                    if (filter === 'all' || card.dataset.category === filter) {
+                        gsap.to(card, { opacity: 1, scale: 1, duration: 0.4 });
+                        card.style.display = 'block';
+                    } else {
+                        gsap.to(card, {
+                            opacity: 0,
+                            scale: 0.8,
+                            duration: 0.4,
+                            onComplete: () => card.style.display = 'none'
+                        });
+                    }
+                });
+            });
+        });
+
+        // Skills Animation
+        const skillBars = document.querySelectorAll('.skill-progress');
+        skillBars.forEach(bar => {
+            gsap.to(bar, {
+                width: bar.dataset.progress + '%',
+                duration: 1.5,
+                ease: 'power2.out',
+                scrollTrigger: {
+                    trigger: bar,
+                    start: 'top 85%'
+                }
+            });
+        });
+
+        // Section Tag Animation
+        gsap.utils.toArray('.section-tag').forEach(tag => {
+            gsap.from(tag, {
+                scrollTrigger: {
+                    trigger: tag,
+                    start: 'top 80%'
+                },
+                x: -50,
+                opacity: 0,
+                duration: 0.8
+            });
+        });
+
+        // Section Title Animation
+        gsap.utils.toArray('.section-title').forEach(title => {
+            gsap.from(title, {
+                scrollTrigger: {
+                    trigger: title,
+                    start: 'top 80%'
+                },
+                y: 50,
+                opacity: 0,
+                duration: 0.8
+            });
+        });
+
+        // Testimonials Animation
+        gsap.from('.testimonial-card', {
+            scrollTrigger: {
+                trigger: '.testimonials-slider',
+                start: 'top 70%'
+            },
+            y: 80,
+            opacity: 0,
+            duration: 0.8,
+            stagger: 0.2
+        });
+
+        // Contact Animation
+        gsap.from('.contact-info', {
+            scrollTrigger: {
+                trigger: '.contact-wrapper',
+                start: 'top 60%'
+            },
+            x: -80,
+            opacity: 0,
+            duration: 1
+        });
+
+        gsap.from('.contact-form', {
+            scrollTrigger: {
+                trigger: '.contact-wrapper',
+                start: 'top 60%'
+            },
+            x: 80,
+            opacity: 0,
+            duration: 1
+        });
+
+        // Parallax Effects
+        gsap.utils.toArray('.gradient-sphere').forEach(sphere => {
+            gsap.to(sphere, {
+                y: -100,
+                scrollTrigger: {
+                    trigger: '.hero',
+                    start: 'top top',
+                    end: 'bottom top',
+                    scrub: 1
+                }
+            });
+        });
+
+        // Mobile Menu
         const menuToggle = document.querySelector('.menu-toggle');
         const gnb = document.querySelector('.gnb');
 
-        menuToggle.addEventListener('click', function() {
-            this.classList.toggle('active');
+        menuToggle.addEventListener('click', () => {
+            menuToggle.classList.toggle('active');
             gnb.classList.toggle('active');
+            document.body.classList.toggle('menu-open');
         });
 
-        // Close menu when clicking menu items
         document.querySelectorAll('.gnb a').forEach(link => {
             link.addEventListener('click', () => {
                 menuToggle.classList.remove('active');
                 gnb.classList.remove('active');
+                document.body.classList.remove('menu-open');
             });
         });
 
-        // Smooth scroll
+        // Smooth scroll for anchor links with Lenis
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function(e) {
                 e.preventDefault();
                 const target = document.querySelector(this.getAttribute('href'));
                 if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
+                    lenis.scrollTo(target);
                 }
             });
         });
 
-        // Header scroll effect
-        const header = document.querySelector('.header');
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 50) {
-                header.classList.add('scrolled');
-            } else {
-                header.classList.remove('scrolled');
-            }
+        // Form Animation
+        const formGroups = document.querySelectorAll('.form-group');
+        formGroups.forEach(group => {
+            const input = group.querySelector('input, textarea');
+
+            input.addEventListener('focus', () => {
+                group.classList.add('focused');
+            });
+
+            input.addEventListener('blur', () => {
+                if (!input.value) {
+                    group.classList.remove('focused');
+                }
+            });
+        });
+
+        // Image reveal on scroll
+        gsap.utils.toArray('.work-image img, .about-img img').forEach(img => {
+            gsap.from(img, {
+                scale: 1.2,
+                duration: 1.5,
+                scrollTrigger: {
+                    trigger: img,
+                    start: 'top 80%',
+                    end: 'top 20%',
+                    scrub: 1
+                }
+            });
         });
     </script>
 </body>
