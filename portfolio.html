@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Creative UIUX Designer Portfolio v1.4</title>
+    <title>Creative UIUX Designer Portfolio v1.5</title>
     <link rel="stylesheet" href="css/portfolio.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -712,12 +712,23 @@
     </div>
 
     <!-- Scripts -->
+    <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 
     <script>
-        // GSAP ScrollTrigger
+        // GSAP & Lenis 초기화
         gsap.registerPlugin(ScrollTrigger);
+
+        const lenis = new Lenis({
+            duration: 1.2,
+            easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+            smoothWheel: true
+        });
+
+        lenis.on('scroll', ScrollTrigger.update);
+        gsap.ticker.add((time) => lenis.raf(time * 1000));
+        gsap.ticker.lagSmoothing(0);
 
         // Custom Cursor
         const cursor = document.querySelector('.cursor');
@@ -752,7 +763,6 @@
         });
 
         // Header Scroll Effect
-        const header = document.querySelector('.header');
         ScrollTrigger.create({
             start: 'top -80',
             end: 99999,
@@ -763,92 +773,43 @@
         const heroTl = gsap.timeline({ defaults: { ease: 'power3.out' } });
 
         heroTl.from('.hero-tag', { opacity: 0, y: 30, duration: 0.8 })
-            .from('.title-line span', {
-                y: 100,
-                opacity: 0,
-                duration: 1,
-                stagger: 0.2
-            }, '-=0.4')
+            .from('.title-line span', { y: 100, opacity: 0, duration: 1, stagger: 0.2 }, '-=0.4')
             .from('.hero-desc', { opacity: 0, y: 20, duration: 0.8 }, '-=0.5')
-            .from('.hero-buttons .btn', {
-                opacity: 0,
-                y: 20,
-                duration: 0.6,
-                stagger: 0.15
-            }, '-=0.4')
-            .from('.stat-item', {
-                opacity: 0,
-                y: 30,
-                duration: 0.6,
-                stagger: 0.1
-            }, '-=0.3')
-            .from('.hero-image', {
-                opacity: 0,
-                scale: 0.8,
-                duration: 1
-            }, '-=1')
-            .from('.floating-card', {
-                opacity: 0,
-                scale: 0,
-                duration: 0.6,
-                stagger: 0.2
-            }, '-=0.5')
+            .from('.hero-buttons .btn', { opacity: 0, y: 20, duration: 0.6, stagger: 0.15 }, '-=0.4')
+            .from('.stat-item', { opacity: 0, y: 30, duration: 0.6, stagger: 0.1 }, '-=0.3')
+            .from('.hero-image', { opacity: 0, scale: 0.8, duration: 1 }, '-=1')
+            .from('.floating-card', { opacity: 0, scale: 0, duration: 0.6, stagger: 0.2 }, '-=0.5')
             .from('.scroll-indicator', { opacity: 0, y: -20, duration: 0.6 }, '-=0.3');
 
-        // Stats Counter Animation
-        const statNumbers = document.querySelectorAll('.stat-number');
-        statNumbers.forEach(stat => {
-            const target = parseInt(stat.dataset.count);
+        // Stats Counter
+        document.querySelectorAll('.stat-number').forEach(stat => {
             gsap.to(stat, {
-                innerHTML: target,
+                innerHTML: parseInt(stat.dataset.count),
                 duration: 2,
                 snap: { innerHTML: 1 },
-                scrollTrigger: {
-                    trigger: stat,
-                    start: 'top 80%'
-                }
+                scrollTrigger: { trigger: stat, start: 'top 80%' }
             });
         });
 
-        // Marquee Animation
-        gsap.to('.marquee-content', {
-            xPercent: -50,
-            repeat: -1,
-            duration: 20,
-            ease: 'linear'
-        });
+        // Marquee
+        gsap.to('.marquee-content', { xPercent: -50, repeat: -1, duration: 20, ease: 'linear' });
 
-        // About Section Animation
+        // Scroll Animations - immediateRender: false로 초기 표시 보장
         gsap.from('.about-images', {
-            scrollTrigger: {
-                trigger: '.about',
-                start: 'top 60%'
-            },
-            x: -100,
-            opacity: 0,
-            duration: 1
+            scrollTrigger: { trigger: '.about', start: 'top 70%' },
+            x: -80, opacity: 0, duration: 1, immediateRender: false
         });
-
         gsap.from('.about-content', {
-            scrollTrigger: {
-                trigger: '.about',
-                start: 'top 60%'
-            },
-            x: 100,
-            opacity: 0,
-            duration: 1
+            scrollTrigger: { trigger: '.about', start: 'top 70%' },
+            x: 80, opacity: 0, duration: 1, immediateRender: false
         });
 
-        // Works Section Animation
-        gsap.from('.work-card', {
-            scrollTrigger: {
-                trigger: '.works-grid',
-                start: 'top 70%'
-            },
-            y: 100,
-            opacity: 0,
-            duration: 0.8,
-            stagger: 0.15
+        // Works Cards
+        gsap.utils.toArray('.work-card').forEach((card, i) => {
+            gsap.from(card, {
+                scrollTrigger: { trigger: card, start: 'top 85%' },
+                y: 60, opacity: 0, duration: 0.6, delay: i * 0.1, immediateRender: false
+            });
         });
 
         // Works Filter
@@ -859,108 +820,52 @@
             btn.addEventListener('click', () => {
                 filterBtns.forEach(b => b.classList.remove('active'));
                 btn.classList.add('active');
-
                 const filter = btn.dataset.filter;
 
                 workCards.forEach(card => {
                     if (filter === 'all' || card.dataset.category === filter) {
-                        gsap.to(card, { opacity: 1, scale: 1, duration: 0.4 });
                         card.style.display = 'block';
+                        gsap.to(card, { opacity: 1, scale: 1, duration: 0.4 });
                     } else {
-                        gsap.to(card, {
-                            opacity: 0,
-                            scale: 0.8,
-                            duration: 0.4,
-                            onComplete: () => card.style.display = 'none'
-                        });
+                        gsap.to(card, { opacity: 0, scale: 0.9, duration: 0.3, onComplete: () => card.style.display = 'none' });
                     }
                 });
             });
         });
 
-        // Skills Animation
-        const skillBars = document.querySelectorAll('.skill-progress');
-        skillBars.forEach(bar => {
+        // Skills
+        document.querySelectorAll('.skill-progress').forEach(bar => {
             gsap.to(bar, {
                 width: bar.dataset.progress + '%',
                 duration: 1.5,
                 ease: 'power2.out',
-                scrollTrigger: {
-                    trigger: bar,
-                    start: 'top 85%'
-                }
+                scrollTrigger: { trigger: bar, start: 'top 90%' }
             });
         });
 
-        // Section Tag Animation
-        gsap.utils.toArray('.section-tag').forEach(tag => {
-            gsap.from(tag, {
-                scrollTrigger: {
-                    trigger: tag,
-                    start: 'top 80%'
-                },
-                x: -50,
-                opacity: 0,
-                duration: 0.8
+        // Testimonials
+        gsap.utils.toArray('.testimonial-card').forEach((card, i) => {
+            gsap.from(card, {
+                scrollTrigger: { trigger: card, start: 'top 85%' },
+                y: 50, opacity: 0, duration: 0.6, delay: i * 0.15, immediateRender: false
             });
         });
 
-        // Section Title Animation
-        gsap.utils.toArray('.section-title').forEach(title => {
-            gsap.from(title, {
-                scrollTrigger: {
-                    trigger: title,
-                    start: 'top 80%'
-                },
-                y: 50,
-                opacity: 0,
-                duration: 0.8
-            });
-        });
-
-        // Testimonials Animation
-        gsap.from('.testimonial-card', {
-            scrollTrigger: {
-                trigger: '.testimonials-slider',
-                start: 'top 70%'
-            },
-            y: 80,
-            opacity: 0,
-            duration: 0.8,
-            stagger: 0.2
-        });
-
-        // Contact Animation
+        // Contact
         gsap.from('.contact-info', {
-            scrollTrigger: {
-                trigger: '.contact-wrapper',
-                start: 'top 60%'
-            },
-            x: -80,
-            opacity: 0,
-            duration: 1
+            scrollTrigger: { trigger: '.contact-wrapper', start: 'top 70%' },
+            x: -60, opacity: 0, duration: 0.8, immediateRender: false
         });
-
         gsap.from('.contact-form', {
-            scrollTrigger: {
-                trigger: '.contact-wrapper',
-                start: 'top 60%'
-            },
-            x: 80,
-            opacity: 0,
-            duration: 1
+            scrollTrigger: { trigger: '.contact-wrapper', start: 'top 70%' },
+            x: 60, opacity: 0, duration: 0.8, immediateRender: false
         });
 
-        // Parallax Effects
+        // Parallax
         gsap.utils.toArray('.gradient-sphere').forEach(sphere => {
             gsap.to(sphere, {
                 y: -100,
-                scrollTrigger: {
-                    trigger: '.hero',
-                    start: 'top top',
-                    end: 'bottom top',
-                    scrub: 1
-                }
+                scrollTrigger: { trigger: '.hero', start: 'top top', end: 'bottom top', scrub: 1 }
             });
         });
 
@@ -982,45 +887,20 @@
             });
         });
 
-        // Smooth scroll for anchor links
+        // Smooth scroll with Lenis
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function(e) {
                 e.preventDefault();
                 const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({ behavior: 'smooth' });
-                }
+                if (target) lenis.scrollTo(target);
             });
         });
 
         // Form Animation
-        const formGroups = document.querySelectorAll('.form-group');
-        formGroups.forEach(group => {
+        document.querySelectorAll('.form-group').forEach(group => {
             const input = group.querySelector('input, textarea');
-
-            input.addEventListener('focus', () => {
-                group.classList.add('focused');
-            });
-
-            input.addEventListener('blur', () => {
-                if (!input.value) {
-                    group.classList.remove('focused');
-                }
-            });
-        });
-
-        // Image reveal on scroll
-        gsap.utils.toArray('.work-image img, .about-img img').forEach(img => {
-            gsap.from(img, {
-                scale: 1.2,
-                duration: 1.5,
-                scrollTrigger: {
-                    trigger: img,
-                    start: 'top 80%',
-                    end: 'top 20%',
-                    scrub: 1
-                }
-            });
+            input.addEventListener('focus', () => group.classList.add('focused'));
+            input.addEventListener('blur', () => { if (!input.value) group.classList.remove('focused'); });
         });
     </script>
 </body>
