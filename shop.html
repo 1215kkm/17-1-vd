@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GREENLIFE - 건강식품 쇼핑몰 v1.0</title>
+    <link rel="stylesheet" href="css/shop.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.css">
+</head>
+<body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="top-bar-inner">
+            <p class="top-notice">🎉 신규회원 첫 구매 시 <strong>20% 할인</strong> + 무료배송!</p>
+            <ul class="top-links">
+                <li><a href="#">로그인</a></li>
+                <li><a href="#">회원가입</a></li>
+                <li><a href="#">고객센터</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="header-inner">
+            <h1 class="logo">
+                <a href="#">GREEN<span>LIFE</span></a>
+            </h1>
+            <nav class="gnb">
+                <ul>
+                    <li><a href="#">전체상품</a></li>
+                    <li><a href="#">비타민</a></li>
+                    <li><a href="#">유산균</a></li>
+                    <li><a href="#">오메가3</a></li>
+                    <li><a href="#">다이어트</a></li>
+                    <li><a href="#">프로틴</a></li>
+                    <li><a href="#">베스트</a></li>
+                </ul>
+            </nav>
+            <div class="header-utils">
+                <button class="search-btn" aria-label="검색">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="11" cy="11" r="8"/>
+                        <path d="m21 21-4.35-4.35"/>
+                    </svg>
+                </button>
+                <a href="#" class="cart-btn" aria-label="장바구니">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M6 6h15l-1.5 9h-12z"/>
+                        <circle cx="9" cy="20" r="1"/>
+                        <circle cx="18" cy="20" r="1"/>
+                        <path d="M6 6L5 1H1"/>
+                    </svg>
+                    <span class="cart-count">3</span>
+                </a>
+                <button class="menu-toggle" aria-label="메뉴">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <div class="wrap" data-scroll-container>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-slider">
+                <div class="hero-slide active">
+                    <div class="hero-content">
+                        <span class="hero-badge">BEST SELLER</span>
+                        <h2 class="hero-title">매일 건강한 습관<br><span class="highlight">프리미엄 멀티비타민</span></h2>
+                        <p class="hero-desc">하루 한 알로 완성하는 균형 잡힌 영양 관리<br>22가지 비타민과 미네랄을 한 번에</p>
+                        <div class="hero-price">
+                            <span class="original-price">45,000원</span>
+                            <span class="sale-price">32,000원</span>
+                            <span class="discount-badge">29%</span>
+                        </div>
+                        <div class="hero-buttons">
+                            <a href="#" class="btn btn-primary">지금 구매하기</a>
+                            <a href="#" class="btn btn-outline">자세히 보기</a>
+                        </div>
+                    </div>
+                    <div class="hero-image">
+                        <img src="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=600&h=600&fit=crop" alt="멀티비타민">
+                    </div>
+                </div>
+            </div>
+            <div class="hero-indicators">
+                <button class="indicator active"></button>
+                <button class="indicator"></button>
+                <button class="indicator"></button>
+            </div>
+        </section>
+
+        <!-- Benefits Bar -->
+        <section class="benefits-bar">
+            <div class="benefits-inner">
+                <div class="benefit-item">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                    <span>3만원 이상 무료배송</span>
+                </div>
+                <div class="benefit-item">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                    </svg>
+                    <span>100% 정품 보장</span>
+                </div>
+                <div class="benefit-item">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="1" y="3" width="15" height="13"/>
+                        <path d="m16 8 4 2v8H8v-4"/>
+                    </svg>
+                    <span>당일 출고</span>
+                </div>
+                <div class="benefit-item">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                        <polyline points="9 22 9 12 15 12 15 22"/>
+                    </svg>
+                    <span>간편한 정기배송</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Categories -->
+        <section class="categories">
+            <div class="section-inner">
+                <div class="section-header">
+                    <h3 class="section-title">카테고리</h3>
+                    <a href="#" class="view-all">전체보기 →</a>
+                </div>
+                <div class="category-grid">
+                    <a href="#" class="category-card">
+                        <div class="category-icon" style="background: linear-gradient(135deg, #FFE5E5, #FFB8B8);">
+                            <img src="https://images.unsplash.com/photo-1550572017-edd951b55104?w=200&h=200&fit=crop" alt="비타민">
+                        </div>
+                        <span class="category-name">비타민</span>
+                    </a>
+                    <a href="#" class="category-card">
+                        <div class="category-icon" style="background: linear-gradient(135deg, #E5F4FF, #B8DFFF);">
+                            <img src="https://images.unsplash.com/photo-1587854692152-cbe660dbde88?w=200&h=200&fit=crop" alt="유산균">
+                        </div>
+                        <span class="category-name">유산균</span>
+                    </a>
+                    <a href="#" class="category-card">
+                        <div class="category-icon" style="background: linear-gradient(135deg, #FFF5E5, #FFE0B8);">
+                            <img src="https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?w=200&h=200&fit=crop" alt="오메가3">
+                        </div>
+                        <span class="category-name">오메가3</span>
+                    </a>
+                    <a href="#" class="category-card">
+                        <div class="category-icon" style="background: linear-gradient(135deg, #E5FFE9, #B8FFBF);">
+                            <img src="https://images.unsplash.com/photo-1622597467836-f3e6707aad4d?w=200&h=200&fit=crop" alt="다이어트">
+                        </div>
+                        <span class="category-name">다이어트</span>
+                    </a>
+                    <a href="#" class="category-card">
+                        <div class="category-icon" style="background: linear-gradient(135deg, #F3E5FF, #DDB8FF);">
+                            <img src="https://images.unsplash.com/photo-1593095948071-474c5cc2989d?w=200&h=200&fit=crop" alt="프로틴">
+                        </div>
+                        <span class="category-name">프로틴</span>
+                    </a>
+                    <a href="#" class="category-card">
+                        <div class="category-icon" style="background: linear-gradient(135deg, #E5FFF8, #B8FFE9);">
+                            <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=200&h=200&fit=crop" alt="슈퍼푸드">
+                        </div>
+                        <span class="category-name">슈퍼푸드</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Best Sellers -->
+        <section class="products best-sellers">
+            <div class="section-inner">
+                <div class="section-header">
+                    <div class="section-title-wrap">
+                        <span class="section-badge">🔥 HOT</span>
+                        <h3 class="section-title">베스트 셀러</h3>
+                    </div>
+                    <p class="section-desc">가장 많이 사랑받는 인기 상품</p>
+                </div>
+                <div class="product-grid">
+                    <article class="product-card">
+                        <div class="product-image">
+                            <span class="product-badge best">BEST</span>
+                            <img src="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=400&h=400&fit=crop" alt="멀티비타민">
+                            <div class="product-actions">
+                                <button class="action-btn wishlist" aria-label="찜하기">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+                                    </svg>
+                                </button>
+                                <button class="action-btn cart" aria-label="장바구니">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M6 6h15l-1.5 9h-12z"/>
+                                        <circle cx="9" cy="20" r="1"/>
+                                        <circle cx="18" cy="20" r="1"/>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <span class="product-brand">GREENLIFE</span>
+                            <h4 class="product-name">프리미엄 멀티비타민 90정</h4>
+                            <div class="product-rating">
+                                <div class="stars">★★★★★</div>
+                                <span class="rating-count">(2,847)</span>
+                            </div>
+                            <div class="product-price">
+                                <span class="original">45,000원</span>
+                                <span class="sale">32,000원</span>
+                                <span class="discount">29%</span>
+                            </div>
+                            <div class="product-tags">
+                                <span class="tag">무료배송</span>
+                                <span class="tag">오늘출발</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="product-card">
+                        <div class="product-image">
+                            <span class="product-badge sale">SALE</span>
+                            <img src="https://images.unsplash.com/photo-1587854692152-cbe660dbde88?w=400&h=400&fit=crop" alt="유산균">
+                            <div class="product-actions">
+                                <button class="action-btn wishlist" aria-label="찜하기">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+                                    </svg>
+                                </button>
+                                <button class="action-btn cart" aria-label="장바구니">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M6 6h15l-1.5 9h-12z"/>
+                                        <circle cx="9" cy="20" r="1"/>
+                                        <circle cx="18" cy="20" r="1"/>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <span class="product-brand">GREENLIFE</span>
+                            <h4 class="product-name">프로바이오틱스 유산균 30포</h4>
+                            <div class="product-rating">
+                                <div class="stars">★★★★★</div>
+                                <span class="rating-count">(1,923)</span>
+                            </div>
+                            <div class="product-price">
+                                <span class="original">38,000원</span>
+                                <span class="sale">28,500원</span>
+                                <span class="discount">25%</span>
+                            </div>
+                            <div class="product-tags">
+                                <span class="tag">무료배송</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="product-card">
+                        <div class="product-image">
+                            <span class="product-badge new">NEW</span>
+                            <img src="https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?w=400&h=400&fit=crop" alt="오메가3">
+                            <div class="product-actions">
+                                <button class="action-btn wishlist" aria-label="찜하기">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+                                    </svg>
+                                </button>
+                                <button class="action-btn cart" aria-label="장바구니">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M6 6h15l-1.5 9h-12z"/>
+                                        <circle cx="9" cy="20" r="1"/>
+                                        <circle cx="18" cy="20" r="1"/>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <span class="product-brand">GREENLIFE</span>
+                            <h4 class="product-name">알래스카 오메가3 1000mg</h4>
+                            <div class="product-rating">
+                                <div class="stars">★★★★☆</div>
+                                <span class="rating-count">(856)</span>
+                            </div>
+                            <div class="product-price">
+                                <span class="original">52,000원</span>
+                                <span class="sale">41,600원</span>
+                                <span class="discount">20%</span>
+                            </div>
+                            <div class="product-tags">
+                                <span class="tag">무료배송</span>
+                                <span class="tag">1+1</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="product-card">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1622597467836-f3e6707aad4d?w=400&h=400&fit=crop" alt="다이어트">
+                            <div class="product-actions">
+                                <button class="action-btn wishlist" aria-label="찜하기">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+                                    </svg>
+                                </button>
+                                <button class="action-btn cart" aria-label="장바구니">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M6 6h15l-1.5 9h-12z"/>
+                                        <circle cx="9" cy="20" r="1"/>
+                                        <circle cx="18" cy="20" r="1"/>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <span class="product-brand">GREENLIFE</span>
+                            <h4 class="product-name">가르시니아 다이어트 60정</h4>
+                            <div class="product-rating">
+                                <div class="stars">★★★★★</div>
+                                <span class="rating-count">(3,241)</span>
+                            </div>
+                            <div class="product-price">
+                                <span class="original">35,000원</span>
+                                <span class="sale">24,500원</span>
+                                <span class="discount">30%</span>
+                            </div>
+                            <div class="product-tags">
+                                <span class="tag">무료배송</span>
+                                <span class="tag">오늘출발</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Promotion Banner -->
+        <section class="promo-banner">
+            <div class="promo-content">
+                <span class="promo-badge">SPECIAL OFFER</span>
+                <h3 class="promo-title">정기배송 신청 시<br><span>최대 30% 할인</span></h3>
+                <p class="promo-desc">매달 편하게 받아보세요. 언제든 취소 가능!</p>
+                <a href="#" class="btn btn-white">정기배송 시작하기</a>
+            </div>
+            <div class="promo-image">
+                <img src="https://images.unsplash.com/photo-1505576399279-565b52d4ac71?w=600&h=400&fit=crop" alt="정기배송">
+            </div>
+        </section>
+
+        <!-- New Products -->
+        <section class="products new-products">
+            <div class="section-inner">
+                <div class="section-header">
+                    <div class="section-title-wrap">
+                        <span class="section-badge">✨ NEW</span>
+                        <h3 class="section-title">신상품</h3>
+                    </div>
+                    <p class="section-desc">새롭게 출시된 건강식품을 만나보세요</p>
+                </div>
+                <div class="product-grid">
+                    <article class="product-card">
+                        <div class="product-image">
+                            <span class="product-badge new">NEW</span>
+                            <img src="https://images.unsplash.com/photo-1593095948071-474c5cc2989d?w=400&h=400&fit=crop" alt="프로틴">
+                            <div class="product-actions">
+                                <button class="action-btn wishlist" aria-label="찜하기">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+                                    </svg>
+                                </button>
+                                <button class="action-btn cart" aria-label="장바구니">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M6 6h15l-1.5 9h-12z"/>
+                                        <circle cx="9" cy="20" r="1"/>
+                                        <circle cx="18" cy="20" r="1"/>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <span class="product-brand">GREENLIFE</span>
+                            <h4 class="product-name">WPI 분리유청 프로틴 2kg</h4>
+                            <div class="product-rating">
+                                <div class="stars">★★★★★</div>
+                                <span class="rating-count">(128)</span>
+                            </div>
+                            <div class="product-price">
+                                <span class="original">89,000원</span>
+                                <span class="sale">69,000원</span>
+                                <span class="discount">22%</span>
+                            </div>
+                            <div class="product-tags">
+                                <span class="tag">무료배송</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="product-card">
+                        <div class="product-image">
+                            <span class="product-badge new">NEW</span>
+                            <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=400&h=400&fit=crop" alt="콜라겐">
+                            <div class="product-actions">
+                                <button class="action-btn wishlist" aria-label="찜하기">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+                                    </svg>
+                                </button>
+                                <button class="action-btn cart" aria-label="장바구니">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M6 6h15l-1.5 9h-12z"/>
+                                        <circle cx="9" cy="20" r="1"/>
+                                        <circle cx="18" cy="20" r="1"/>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <span class="product-brand">GREENLIFE</span>
+                            <h4 class="product-name">저분자 피쉬콜라겐 펩타이드</h4>
+                            <div class="product-rating">
+                                <div class="stars">★★★★★</div>
+                                <span class="rating-count">(89)</span>
+                            </div>
+                            <div class="product-price">
+                                <span class="original">48,000원</span>
+                                <span class="sale">38,400원</span>
+                                <span class="discount">20%</span>
+                            </div>
+                            <div class="product-tags">
+                                <span class="tag">무료배송</span>
+                                <span class="tag">사은품</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="product-card">
+                        <div class="product-image">
+                            <span class="product-badge new">NEW</span>
+                            <img src="https://images.unsplash.com/photo-1505576399279-565b52d4ac71?w=400&h=400&fit=crop" alt="스피루리나">
+                            <div class="product-actions">
+                                <button class="action-btn wishlist" aria-label="찜하기">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+                                    </svg>
+                                </button>
+                                <button class="action-btn cart" aria-label="장바구니">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M6 6h15l-1.5 9h-12z"/>
+                                        <circle cx="9" cy="20" r="1"/>
+                                        <circle cx="18" cy="20" r="1"/>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <span class="product-brand">GREENLIFE</span>
+                            <h4 class="product-name">유기농 스피루리나 300정</h4>
+                            <div class="product-rating">
+                                <div class="stars">★★★★☆</div>
+                                <span class="rating-count">(56)</span>
+                            </div>
+                            <div class="product-price">
+                                <span class="original">42,000원</span>
+                                <span class="sale">33,600원</span>
+                                <span class="discount">20%</span>
+                            </div>
+                            <div class="product-tags">
+                                <span class="tag">무료배송</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="product-card">
+                        <div class="product-image">
+                            <span class="product-badge new">NEW</span>
+                            <img src="https://images.unsplash.com/photo-1615485500704-8e990f9900f7?w=400&h=400&fit=crop" alt="비타민D">
+                            <div class="product-actions">
+                                <button class="action-btn wishlist" aria-label="찜하기">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+                                    </svg>
+                                </button>
+                                <button class="action-btn cart" aria-label="장바구니">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M6 6h15l-1.5 9h-12z"/>
+                                        <circle cx="9" cy="20" r="1"/>
+                                        <circle cx="18" cy="20" r="1"/>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <span class="product-brand">GREENLIFE</span>
+                            <h4 class="product-name">고함량 비타민D 5000IU</h4>
+                            <div class="product-rating">
+                                <div class="stars">★★★★★</div>
+                                <span class="rating-count">(234)</span>
+                            </div>
+                            <div class="product-price">
+                                <span class="original">28,000원</span>
+                                <span class="sale">22,400원</span>
+                                <span class="discount">20%</span>
+                            </div>
+                            <div class="product-tags">
+                                <span class="tag">무료배송</span>
+                                <span class="tag">오늘출발</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Reviews -->
+        <section class="reviews">
+            <div class="section-inner">
+                <div class="section-header center">
+                    <h3 class="section-title">고객 후기</h3>
+                    <p class="section-desc">실제 구매 고객님들의 생생한 후기</p>
+                </div>
+                <div class="review-grid">
+                    <div class="review-card">
+                        <div class="review-header">
+                            <div class="reviewer">
+                                <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop&crop=face" alt="리뷰어">
+                                <div class="reviewer-info">
+                                    <span class="name">김**</span>
+                                    <span class="date">2024.01.15</span>
+                                </div>
+                            </div>
+                            <div class="review-rating">★★★★★</div>
+                        </div>
+                        <p class="review-product">멀티비타민 90정</p>
+                        <p class="review-text">"매일 아침 한 알씩 먹고 있는데 확실히 피로감이 줄어든 것 같아요. 알 크기도 적당하고 넘기기 좋아요!"</p>
+                    </div>
+                    <div class="review-card">
+                        <div class="review-header">
+                            <div class="reviewer">
+                                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=face" alt="리뷰어">
+                                <div class="reviewer-info">
+                                    <span class="name">이**</span>
+                                    <span class="date">2024.01.14</span>
+                                </div>
+                            </div>
+                            <div class="review-rating">★★★★★</div>
+                        </div>
+                        <p class="review-product">프로바이오틱스 유산균</p>
+                        <p class="review-text">"장이 예민한 편인데 이거 먹고나서 속이 편해졌어요. 정기배송으로 계속 받아먹을 예정입니다."</p>
+                    </div>
+                    <div class="review-card">
+                        <div class="review-header">
+                            <div class="reviewer">
+                                <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop&crop=face" alt="리뷰어">
+                                <div class="reviewer-info">
+                                    <span class="name">박**</span>
+                                    <span class="date">2024.01.13</span>
+                                </div>
+                            </div>
+                            <div class="review-rating">★★★★☆</div>
+                        </div>
+                        <p class="review-product">오메가3 1000mg</p>
+                        <p class="review-text">"비린내 없고 좋아요! 하루에 두 알씩 먹고 있는데 혈액순환에 좋다고 해서 꾸준히 먹으려구요."</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Brand Story -->
+        <section class="brand-story">
+            <div class="brand-content">
+                <span class="brand-badge">ABOUT US</span>
+                <h3 class="brand-title">자연에서 찾은<br>건강한 삶의 시작</h3>
+                <p class="brand-desc">GREENLIFE는 최상의 원료만을 엄선하여 건강한 삶을 위한 프리미엄 건강식품을 제공합니다. 모든 제품은 GMP 인증 시설에서 생산되며, 철저한 품질 관리를 통해 안전하고 효과적인 제품만을 고객님께 전달합니다.</p>
+                <div class="brand-stats">
+                    <div class="stat">
+                        <span class="stat-number">150+</span>
+                        <span class="stat-label">제품 라인업</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">50만+</span>
+                        <span class="stat-label">누적 고객</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">4.8</span>
+                        <span class="stat-label">평균 평점</span>
+                    </div>
+                </div>
+                <a href="#" class="btn btn-dark">브랜드 스토리 보기</a>
+            </div>
+            <div class="brand-image">
+                <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800&h=600&fit=crop" alt="브랜드 스토리">
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-inner">
+                <div class="footer-top">
+                    <div class="footer-brand">
+                        <h2 class="footer-logo">GREEN<span>LIFE</span></h2>
+                        <p>건강한 삶을 위한 프리미엄 건강식품</p>
+                        <div class="footer-social">
+                            <a href="#" aria-label="Instagram">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <rect x="2" y="2" width="20" height="20" rx="5"/>
+                                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+                                </svg>
+                            </a>
+                            <a href="#" aria-label="Facebook">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+                                </svg>
+                            </a>
+                            <a href="#" aria-label="YouTube">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"/>
+                                    <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="footer-links">
+                        <div class="footer-col">
+                            <h4>쇼핑 안내</h4>
+                            <ul>
+                                <li><a href="#">전체상품</a></li>
+                                <li><a href="#">베스트셀러</a></li>
+                                <li><a href="#">신상품</a></li>
+                                <li><a href="#">할인상품</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer-col">
+                            <h4>고객 서비스</h4>
+                            <ul>
+                                <li><a href="#">자주 묻는 질문</a></li>
+                                <li><a href="#">1:1 문의</a></li>
+                                <li><a href="#">배송 조회</a></li>
+                                <li><a href="#">교환/반품</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer-col">
+                            <h4>회사 정보</h4>
+                            <ul>
+                                <li><a href="#">회사 소개</a></li>
+                                <li><a href="#">이용약관</a></li>
+                                <li><a href="#">개인정보처리방침</a></li>
+                                <li><a href="#">제휴 문의</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-info">
+                    <p><strong>고객센터</strong> 1588-0000 (평일 09:00~18:00, 점심 12:00~13:00)</p>
+                    <p>(주)그린라이프 | 대표: 홍길동 | 사업자등록번호: 123-45-67890</p>
+                    <p>서울특별시 강남구 테헤란로 123, 그린빌딩 5층</p>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2024 GREENLIFE. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+    <script>
+        // GSAP & Locomotive Scroll 초기화
+        gsap.registerPlugin(ScrollTrigger);
+
+        const locoScroll = new LocomotiveScroll({
+            el: document.querySelector('[data-scroll-container]'),
+            smooth: true,
+            multiplier: 0.8,
+            lerp: 0.08
+        });
+
+        locoScroll.on('scroll', ScrollTrigger.update);
+
+        ScrollTrigger.scrollerProxy('[data-scroll-container]', {
+            scrollTop(value) {
+                return arguments.length ? locoScroll.scrollTo(value, 0, 0) : locoScroll.scroll.instance.scroll.y;
+            },
+            getBoundingClientRect() {
+                return { top: 0, left: 0, width: window.innerWidth, height: window.innerHeight };
+            },
+            pinType: document.querySelector('[data-scroll-container]').style.transform ? 'transform' : 'fixed'
+        });
+
+        ScrollTrigger.addEventListener('refresh', () => locoScroll.update());
+        ScrollTrigger.refresh();
+
+        // Header scroll effect
+        locoScroll.on('scroll', (args) => {
+            if (args.scroll.y > 100) {
+                document.querySelector('.header').classList.add('scrolled');
+            } else {
+                document.querySelector('.header').classList.remove('scrolled');
+            }
+        });
+
+        // Product cards animation
+        gsap.utils.toArray('.product-card').forEach((card, i) => {
+            gsap.from(card, {
+                scrollTrigger: { trigger: card, start: 'top 85%', scroller: '[data-scroll-container]' },
+                y: 50, opacity: 0, duration: 0.6, delay: i % 4 * 0.1, immediateRender: false
+            });
+        });
+
+        // Category cards animation
+        gsap.utils.toArray('.category-card').forEach((card, i) => {
+            gsap.from(card, {
+                scrollTrigger: { trigger: card, start: 'top 85%', scroller: '[data-scroll-container]' },
+                y: 30, opacity: 0, duration: 0.5, delay: i * 0.08, immediateRender: false
+            });
+        });
+
+        // Review cards animation
+        gsap.utils.toArray('.review-card').forEach((card, i) => {
+            gsap.from(card, {
+                scrollTrigger: { trigger: card, start: 'top 85%', scroller: '[data-scroll-container]' },
+                y: 40, opacity: 0, duration: 0.6, delay: i * 0.15, immediateRender: false
+            });
+        });
+
+        // Brand story animation
+        gsap.from('.brand-content', {
+            scrollTrigger: { trigger: '.brand-story', start: 'top 70%', scroller: '[data-scroll-container]' },
+            x: -80, opacity: 0, duration: 1, immediateRender: false
+        });
+        gsap.from('.brand-image', {
+            scrollTrigger: { trigger: '.brand-story', start: 'top 70%', scroller: '[data-scroll-container]' },
+            x: 80, opacity: 0, duration: 1, immediateRender: false
+        });
+
+        // Mobile Menu
+        const menuToggle = document.querySelector('.menu-toggle');
+        const gnb = document.querySelector('.gnb');
+
+        menuToggle.addEventListener('click', () => {
+            menuToggle.classList.toggle('active');
+            gnb.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
