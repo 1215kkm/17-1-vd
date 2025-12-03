@@ -1,0 +1,28 @@
+# 비트코인 예측 시스템 - Apache 설정
+
+# data 폴더 접근 차단
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteRule ^data/ - [F,L]
+    RewriteRule ^includes/ - [F,L]
+</IfModule>
+
+# 직접 접근 차단
+<Files "config.php">
+    Order Allow,Deny
+    Deny from all
+</Files>
+
+<Files "cron_weekly.php">
+    Order Allow,Deny
+    Deny from all
+</Files>
+
+# UTF-8 설정
+AddDefaultCharset UTF-8
+
+# PHP 설정
+<IfModule mod_php.c>
+    php_value max_execution_time 120
+    php_value memory_limit 128M
+</IfModule>
